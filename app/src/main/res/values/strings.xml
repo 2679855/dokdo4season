@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dokdo\'s Four Seasons</string>
+    <string name="spring">Spring</string>
+    <string name="summer">Summer</string>
+    <string name="autumn">Autumn</string>
+    <string name="winter">Winter</string>
+    <string name="app_ad_id">ca-app-pub-6372576068828805~6671777028</string>
+    <string name="banner_id">ca-app-pub-6372576068828805/2964288696</string>
+    <string name="banner_id_test">ca-app-pub-6372576068828805/2964288696</string>
+</resources>
