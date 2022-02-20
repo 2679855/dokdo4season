@@ -8,7 +8,11 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.mycooco.dokdo.databinding.ActivityMainBinding;
 import com.mycooco.dokdo.vo.Autumn;
 import com.mycooco.dokdo.vo.Season;
@@ -28,6 +32,16 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = binding.adView;
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Season spring = new Spring();
         Season summer = new Summer();
